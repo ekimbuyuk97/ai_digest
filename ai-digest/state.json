@@ -1,1 +1,36 @@
-{"last_run":null,"seen_anthropic_urls":[],"deep_dive_history":[],"open_threads":[]}
+{
+  "last_run": "2026-06-29T02:10:00Z",
+  "seen_anthropic_urls": [
+    "https://www.anthropic.com/news/introducing-claude-tag",
+    "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem",
+    "https://www.anthropic.com/news/fable-mythos-access",
+    "https://www.anthropic.com/news/anthropic-public-record",
+    "https://www.anthropic.com/news/tcs-anthropic-partnership",
+    "https://www.anthropic.com/news/dxc-anthropic-alliance",
+    "https://www.anthropic.com/news/claude-corps",
+    "https://www.anthropic.com/research/economic-index-june-2026-report",
+    "https://www.anthropic.com/research/project-fetch-phase-two",
+    "https://www.anthropic.com/research/claude-code-expertise",
+    "https://www.anthropic.com/research/agents-in-biology",
+    "https://www.anthropic.com/research/n-days",
+    "https://www.anthropic.com/research/making-claude-a-chemist"
+  ],
+  "deep_dive_history": [
+    {"topic": "Google DeepMind talent exodus (Jumper, Shazeer, Adler, Pritzel) to Anthropic/OpenAI", "date_covered": "2026-06-29"},
+    {"topic": "Anthropic vs Alibaba/Qwen adversarial distillation accusation to Senate", "date_covered": "2026-06-29"},
+    {"topic": "Fable 5 / Mythos 5 US export-control suspension and limited release", "date_covered": "2026-06-29"},
+    {"topic": "OpenAI GPT-5.6 family (Sol/Terra/Luna) government-gated limited preview", "date_covered": "2026-06-29"},
+    {"topic": "Tokenmaxxing-to-efficiency enterprise AI spending shift", "date_covered": "2026-06-29"},
+    {"topic": "Anthropic Economic Index 'Cadences' report", "date_covered": "2026-06-29"},
+    {"topic": "AI-native product operating model (Aakash Gupta/Varma, Codex, Cat Wu)", "date_covered": "2026-06-29"},
+    {"topic": "Interpretability: natural-language autoencoders & May Circuits update", "date_covered": "2026-06-29"}
+  ],
+  "open_threads": [
+    {"topic": "Google DeepMind talent exodus", "date_opened": "2026-06-29", "last_update": "2026-06-29"},
+    {"topic": "Anthropic-Alibaba distillation accusation & potential Senate sanctions", "date_opened": "2026-06-29", "last_update": "2026-06-29"},
+    {"topic": "Fable 5 / Mythos 5 export-control saga", "date_opened": "2026-06-29", "last_update": "2026-06-29"},
+    {"topic": "Anthropic IPO (S-1 filed June 1)", "date_opened": "2026-06-29", "last_update": "2026-06-29"},
+    {"topic": "Enterprise AI efficiency / tokenmaxxing slowdown and its effect on lab growth", "date_opened": "2026-06-29", "last_update": "2026-06-29"},
+    {"topic": "OpenAI GPT-5.6 general availability rollout", "date_opened": "2026-06-29", "last_update": "2026-06-29"}
+  ]
+}
