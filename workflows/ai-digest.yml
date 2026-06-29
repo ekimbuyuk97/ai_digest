@@ -1,0 +1,52 @@
+name: AI Digest
+
+on:
+  schedule:
+    - cron: '0 13 * * *'   # 8am ET (UTC-5 winter / UTC-4 summer — adjust as needed)
+    - cron: '0 1 * * *'    # 8pm ET
+  workflow_dispatch:        # allows manual trigger from GitHub UI
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write       # needed to commit state.json back to repo
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Create state directory
+        run: mkdir -p ai-digest
+
+      - name: Initialize state file if missing
+        run: |
+          if [ ! -f ai-digest/state.json ]; then
+            echo '{"last_run":null,"seen_anthropic_urls":[],"deep_dive_history":[],"open_threads":[]}' > ai-digest/state.json
+          fi
+
+      - name: Run AI digest
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+        run: |
+          claude --print --dangerously-skip-permissions \
+            "$(cat ai-digest/prompt.md)" \
+            < /dev/null
+
+      - name: Commit updated state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add ai-digest/state.json
+          git diff --staged --quiet || git commit -m "chore: update digest state [skip ci]"
+          git push
