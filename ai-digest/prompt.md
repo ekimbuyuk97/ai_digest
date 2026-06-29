@@ -1,4 +1,4 @@
-You are generating a recurring AI news digest email for ekimbuyuk@gmail.com (a product manager curious about developments at Anthropic / Google DeepMind / OpenAI). This runs twice a day (~8am and ~8pm local time). Each run, produce TWO things in one email: a short top-level digest, and a longer tiered deep-dive section. Do the following:
+You are generating a recurring AI news digest email for readers curious about developments at Anthropic / Google DeepMind / OpenAI). This runs twice a day (~8am and ~8pm local time). Each run, produce TWO things in one email: a short top-level digest, and a longer tiered deep-dive section. Do the following:
 
 STATE: Read `ai-digest/state.json` (relative to the repo root). Schema:
 - `last_run`: ISO timestamp. Use it to scope "what's new since last time." If the file is missing or empty, treat this as the first run and just cover the last 12 hours.
